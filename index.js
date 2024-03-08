@@ -6,7 +6,9 @@ const dataNumbers = "0123456789";
 
 const dataSymbols = "$^*ù!;:,?&é\"'(-è_çà@=)~#{[|`\^]}/€`";
 
-const rangeValue = document.getElementById("password-length")
+const rangeValue = document.getElementById("password-length");
+
+const passwordOutput = document.getElementById("password-output");
 
 function generatePassword() {
     let data = [];
@@ -25,7 +27,16 @@ function generatePassword() {
         password += data[Math.floor(Math.random() * data.length)];
         console.log(password);
     }
+    passwordOutput.value = password;
 
+    passwordOutput.select();
+    navigator.clipboard.writeText(passwordOutput.value);
+
+    generateButton.textContent = "Copied !";
+
+    setTimeout(() =>{
+        generateButton.textContent = "Generate PassWord"
+    }, 2000);
 }
 
 generateButton.addEventListener("click", generatePassword);
