@@ -4,7 +4,7 @@ const dataUppercase = dataLowercase.toUpperCase();
 
 const dataNumbers = "0123456789";
 
-const dataSymbols = "$^*ù!;:,?&é\"'(-è_çà@=)~#{[|`\^]}/€`";
+const dataSymbols = "$^*ù!;:,?&é\"'(-è_çà@=)~#`^€";
 
 const rangeValue = document.getElementById("password-length");
 
